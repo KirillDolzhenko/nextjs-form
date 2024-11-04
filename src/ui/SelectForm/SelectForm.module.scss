@@ -1,0 +1,35 @@
+@use "@styles/vars/colors.scss" as c;
+@use "@styles/vars/keyframes.scss" as *;
+
+.select {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  gap: 14px;
+
+  label {
+    line-height: 1.1875;
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+    font-size: 0.9375rem;
+
+    & .error {
+      animation: 1 0.1s ease scaleAnimation;
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      color: c.$error;
+    }
+  }
+}
+
+.select {
+  width: 100%;
+}

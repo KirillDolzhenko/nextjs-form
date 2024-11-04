@@ -1,0 +1,23 @@
+@use "@styles/vars/colors.scss" as colors;
+
+.button {
+  color: colors.$btn;
+  font-size: 1rem;
+  padding: 14.5px;
+  border-radius: 41px;
+  border: 1px solid colors.$border;
+
+  user-select: none;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    background: colors.$disabled;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: colors.$disabledText;
+    background: colors.$disabled;
+    border: none;
+  }
+}
